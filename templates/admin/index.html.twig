@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+
+
+{% extends 'base.html.twig' %}
+{% block title %}Liste des Classes{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 class="mb-4">Liste des classes</h1>
+
+        <div class="mb-3">
+            <a href="{{ path('cours.index') }}" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i> Créer un cours
+            </a>
+        </div>
+
+        
+        <!-- Liste des cours -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>libelle</th>
+                    <th>cours</th>
+                    <th>professeur</th>
+                    <th>niveau</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for classe in classes %}
+                    <tr>
+                        <td>{{ classe.id }}</td>
+                        <td>{{ classe.libelle }}</td>
+                        <td>{{ classe. prof}}</td>
+                        <td>{{ classe.cours }}</td>
+                        <td>{{ classe.niveau }}</td>
+                        
+                    </tr>
+               
+            </tbody>
+        </table>
+
+{% endblock %}
+
+{% endblock %}
